@@ -17,6 +17,6 @@ router.put('/:id', controller.updateUser);
 router.delete('/:id', controller.destroyUser);
 
 // GET 
-router.get('/', authorizationMiddleware(['admin']), controller.getUsers);
+router.get('/', authorizationMiddleware(['user']), controller.getUsers);
 
 module.exports = router;

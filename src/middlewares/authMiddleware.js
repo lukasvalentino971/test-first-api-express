@@ -15,7 +15,7 @@ const authorizationMiddleware = (allowedRoles) => {
             }
 
             req.user = decoded;
-            const userRole = req.user ? req.user.role : 'guest';
+            const userRole = req.user ? req.user.role : 'user';
             console.log('oioi', userRole);
 
             if (allowedRoles.includes(userRole)) {
