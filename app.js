@@ -3,11 +3,14 @@ const express = require('express');
 const routesUser = require('./src/routes/userRoutes');
 const routeAuth = require('./src/routes/authRoute');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const app = express();
 
 // middleware for passing json
 app.use(express.json());
+
+app.use(cors());
 
 app.use(
     bodyParser.urlencoded({

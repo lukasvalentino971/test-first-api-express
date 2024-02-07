@@ -3,7 +3,7 @@ const router = express.Router();
 const controller = require('../controllers/userController');
 const authorizationMiddleware = require('../middlewares/authMiddleware');
 
-// router.get('/', controller.getUsers);
+router.get('/', controller.getUsers);
 
 router.get('/:id', controller.getUsers);
 
@@ -17,6 +17,6 @@ router.put('/:id', controller.updateUser);
 router.delete('/:id', controller.destroyUser);
 
 // GET 
-router.get('/', authorizationMiddleware(['user']), controller.getUsers);
+//router.get('/', authorizationMiddleware(['user']), controller.getUsers);
 
 module.exports = router;
